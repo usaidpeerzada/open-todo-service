@@ -1,0 +1,25 @@
+{
+  "name": "open-todo-service",
+  "version": "1.0.0",
+  "description": "service for open-todo app",
+  "main": "app.ts",
+  "scripts": {
+     "build": "npx tsc -p tsconfig.json",
+    "dev": "npx ts-node app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "usaidpeerzada",
+  "license": "ISC",
+  "dependencies": {
+    "auth-ez": "^1.0.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.4",
+    "resend": "^3.2.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5"
+  }
+}
