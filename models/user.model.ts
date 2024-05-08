@@ -1,12 +1,27 @@
-import mongoose from "mongoose";
-import { IUser } from "../utils/types.ts";
+import { Schema, model, Document } from "mongoose";
+import { Todo, TodoModel } from "./todo.model.ts";
+interface User extends Document {
+  username: string;
+  email: string;
+  password: string;
+  todos: Todo[];
+}
 
-const userSchema = new mongoose.Schema<IUser>({
-  username: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
+const UserSchema = new Schema<User>({
+  username: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  todos: [{ type: Schema.Types.ObjectId, ref: "Todo" }],
 });
 
-const User = mongoose.model<IUser>("User", userSchema);
-
-export { User };
+export default model<User>("User", UserSchema);

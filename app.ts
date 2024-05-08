@@ -5,7 +5,7 @@ import { Resend } from "resend";
 
 import { CreateMongoAuthController } from "auth-ez";
 
-import { User } from "./models/user.model";
+import User from "./models/user.model";
 import { Config } from "./utils/types";
 import { EMAIL_SUBJECT, RESEND } from "./utils/constants";
 

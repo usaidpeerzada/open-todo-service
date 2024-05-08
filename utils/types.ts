@@ -1,12 +1,5 @@
 import { EmailService } from "auth-ez";
 
-export interface IUser {
-  [x: string]: any;
-  username: string;
-  password: string;
-  email: string;
-}
-
 export type RouteNames = {
   loginWithEmailRoute?: string;
   loginWithUsernameRoute?: string;
