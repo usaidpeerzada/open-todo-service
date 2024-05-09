@@ -1,5 +1,5 @@
 import { Schema, model, Document } from "mongoose";
-import { Todo, TodoSchema } from "./todo.model.ts";
+import { Todo, TodoSchema } from "./todo.model";
 interface User extends Document {
   username: string;
   email: string;

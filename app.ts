@@ -16,7 +16,6 @@ const app = express();
 const resend = new Resend(process.env.RESEND_API_KEY);
 const port = process.env.PORT;
 const dbUrl = process.env.OPEN_TODO_DB_URL;
-
 mongoose.connect(dbUrl);
 
 const authEzConfig: Config = {
