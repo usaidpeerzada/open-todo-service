@@ -11,8 +11,7 @@
   "author": "usaidpeerzada",
   "license": "ISC",
   "dependencies": {
-    "auth-ez": "^1.0.8",
-    "auth-ez-local": "file:../auth-ez-ts",
+    "auth-ez": "^1.0.9",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongoose": "^8.3.4",
