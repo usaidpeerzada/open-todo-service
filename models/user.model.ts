@@ -1,9 +1,10 @@
 import { Schema, model, Document } from "mongoose";
-import { Todo, TodoModel } from "./todo.model.ts";
+import { Todo, TodoSchema } from "./todo.model.ts";
 interface User extends Document {
   username: string;
   email: string;
   password: string;
+  emailVerified: boolean;
   todos: Todo[];
 }
 
@@ -21,7 +22,8 @@ const UserSchema = new Schema<User>({
     type: String,
     required: true,
   },
-  todos: [{ type: Schema.Types.ObjectId, ref: "Todo" }],
+  emailVerified: { type: Boolean, default: false },
+  todos: [TodoSchema],
 });
 
 export default model<User>("User", UserSchema);
