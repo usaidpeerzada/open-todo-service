@@ -1,4 +1,3 @@
-// routes.js
 import express from "express";
 import User from "../models/user.model";
 import { TodoModel } from "../models/todo.model";
